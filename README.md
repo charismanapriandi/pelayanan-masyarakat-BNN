@@ -1,5 +1,5 @@
 ## How to Start
-### Install Dependency
+1. Install Dependency
 - npm install
-### Start App
+2. Start App
 - npm run dev
