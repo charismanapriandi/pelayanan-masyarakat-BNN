@@ -1,0 +1,6 @@
+mixin service_card({image, href, title, summary})
+  a(href=href)
+    .paper.service-paper 
+      img(src=image, alt=title)
+      h3.service-title.text-primary=title
+      p.service-summary.text-secondary.ts-m=summary 

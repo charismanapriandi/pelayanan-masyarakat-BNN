@@ -1,0 +1,62 @@
+.input-group {
+  &:first-child {
+    margin: 15px 0;
+  }
+  margin-bottom: 15px;
+  label {
+    color: $textsecondary;
+    font-size: $fontmedium;
+  }
+  input, textarea, select {
+    font-family: $fontfamilyinter;
+    color: $textsecondary;
+  }
+  textarea {
+    resize: vertical;
+  }
+  &.input-file {
+    .upload-field {
+      margin-top: 6px;
+      font-size: $fontmedium;
+      border: 1px solid #CDCDCD;
+      background-color: white;
+      border-radius: 5px;
+      padding: 8px 16px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &.input, &.textarea, &.select {
+    label {
+      display: block;
+      margin-bottom: 6px;
+      text-transform: capitalize;
+    }
+    input, textarea, select {
+      font-size: $fontmedium;
+      border: 1px solid #CDCDCD;
+      border-radius: 5px;
+      padding: 8px 16px;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &.checkbox {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+    input {
+
+    }
+  }
+}

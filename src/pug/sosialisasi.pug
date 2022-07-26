@@ -1,0 +1,67 @@
+extends ./layout/_layout
+
+block title 
+  | Sosialisasi | BNN Kabupaten Sleman
+
+block content 
+  .konsultasi.container 
+    h1.page-title.text-primary Ajukan Kerjasama Anda Kepada Badan Narkotika Nasional Kabupaten Sleman
+    form.form
+      h3.form-title Formulir Sosialisasi
+      include ./mixins/input
+      include ./mixins/input_file
+      include ./mixins/button
+      include ./mixins/select
+      include ./mixins/textarea
+      .input-group.input
+        +input({
+          label: 'Nama', 
+          name: 'nama', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Email', 
+          name: 'email', 
+          type: 'email'})
+      .input-group.input
+        +input({
+          label: 'Nomor Hp', 
+          name: 'nomor_hp', 
+          type: 'number'})
+      .input-group.input
+        +input({
+          label: 'Instansi', 
+          name: 'instansi', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Tanggal Pelaksanaan', 
+          name: 'tanggal_pelaksanaan', 
+          type: 'date'})
+      .input-group.input
+        +input({
+          label: 'Waktu Pelaksanaan', 
+          name: 'waktu_pelaksanaan', 
+          type: 'time'})
+      .input-group.input
+        +input({
+          label: 'Tempat Pelaksanaan', 
+          name: 'tempat_pelaksanaan', 
+          type: 'text'})
+      .input-group.select
+        +select({label: 'Metode Sosialisasi', name: 'metode_sosialisasi'})
+          option(value='Tatap Muka (Offline)') 
+            | Tatap Muka (Offline)
+          option(value='Virtual (Online)') 
+            | Virtual (Online)
+      .input-group.input-file
+        +input_file({
+          label: 'Lampiran Surat Pengajuan Kerjasama Sosialisai (PDF)', 
+          name: 'lamporan'})
+      .input-group.checkbox
+        +input({
+          label: 'Data Yang Saya Berikan Benar Adanya & Dapat Dipertanggungjawabkan', 
+          name: 'setuju', 
+          type: 'checkbox'})
+      div.form-action
+        +button({type: 'submit'}) Submit

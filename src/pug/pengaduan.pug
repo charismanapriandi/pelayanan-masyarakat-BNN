@@ -1,0 +1,72 @@
+extends ./layout/_layout
+
+block title 
+  | Pengaduan | BNN Kabupaten Sleman
+
+block content 
+  .pengaduan.container 
+    h1.page-title.text-primary Sampaikan Laporan Anda Kepada Badan Narkotika Nasional Kabupaten Sleman
+    form.form
+      h3.form-title Formulir Pengaduan
+      include ./mixins/input
+      include ./mixins/input_file
+      include ./mixins/button
+      include ./mixins/select
+      include ./mixins/textarea
+      .input-group.input
+        +input({
+          label: 'Nama', 
+          name: 'nama', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Email', 
+          name: 'email', 
+          type: 'email'})
+      .input-group.select
+        +select({label: 'Jenis Laporan', name: 'jenis_laporan'})
+          option(value='Penyalahgunaan & Peredaran Gelap Narkotika Daerah Sleman') 
+            | Penyalahgunaan & Peredaran Gelap Narkotika Daerah Sleman
+          option(value='Whistleblower (Pelanggaran Yang Dilakukan Oleh Pertugas BNNK Sleman)') 
+            | Whistleblower (Pelanggaran Yang Dilakukan Oleh Pertugas BNNK Sleman)
+          option(value='Gratifikasi (Pemberian Uang,Barang,Komisi,DLL Kepada Petugas BNNK Sleman  Secara Cuma-Cuma)') 
+            | Gratifikasi (Pemberian Uang,Barang,Komisi,DLL Kepada Petugas BNNK Sleman  Secara Cuma-Cuma)
+          option(value='Pelayanan Publik Di BNNK Sleman') 
+            | Pelayanan Publik Di BNNK Sleman
+          option(value='Laporan Lainnya') Laporan Lainnya
+      .input-group.input
+        +input({
+          label: 'Nomor Hp', 
+          name: 'nomor_hp', 
+          type: 'number'})
+      .input-group.input
+        +input({
+          label: 'Nama Kota/Kabupaten', 
+          name: 'nama_kota', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Tanggal Kejadian', 
+          name: 'tanggal_kejadian', 
+          type: 'date'})
+      .input-group.textarea
+        +textarea({
+          label: 'Uraian Laporan', 
+          name: 'uraian_laporan', 
+          rows: '5'})
+      .input-group.input-file
+        +input_file({
+          label: 'Lampiran', 
+          name: 'lampiran'})
+      .input-group.input-file
+        +input_file({
+          label: 'Gambar',
+          name: 'gambar'})
+      .input-group.checkbox
+        +input({
+          label: 'Data Yang Saya Berikan Benar Adanya & Dapat Dipertanggungjawabkan', 
+          name: 'setuju', 
+          type: 'checkbox'})
+      .form-action
+        +button({type: 'submit'}) Submit
+        

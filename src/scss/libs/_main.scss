@@ -1,0 +1,32 @@
+.d-flex {
+  display: flex;
+  &.ia-center {
+    align-items: center;
+  }
+}
+
+@for $i from 1 through 10 {
+  $gap: 5px * $i;
+  .g-#{$i} {
+    gap: $gap;
+  }
+}
+
+@for $i from 1 through 20 {
+  $margin: 4px * $i;
+  .m-#{$i} {
+    margin: $margin;
+  }
+  .mb-#{$i} {
+    margin-bottom: $margin;
+  }
+  .mr-#{$i} {
+    margin-right: $margin;
+  }
+  .ml-#{$i} {
+    margin-left: $margin;
+  }
+  .mt-#{$i} {
+    margin-top: $margin;
+  }
+}

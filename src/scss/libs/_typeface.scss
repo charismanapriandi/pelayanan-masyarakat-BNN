@@ -1,0 +1,33 @@
+// *
+// * place your text style here
+// *
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$textprimary: #111827;
+$textsecondary: #111827A8;
+$fontfamilyinter: 'Inter', sans-serif;
+$fontmedium: 16px;
+$fontsmall: 14px;
+
+.text-primary {
+  color: $textprimary;
+}
+
+.text-secondary {
+  color: #111827A8;
+}
+
+.ts-m {
+  font-size: $fontmedium;
+  line-height: 24px;
+}
+
+.ts-s {
+  font-size: $fontsmall;
+  line-height: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, span, ul, li {
+  font-family: $fontfamilyinter;
+}
+

@@ -1,0 +1,50 @@
+extends layout/_layout
+
+block title
+  | BNN Kabupaten Sleman 
+
+block content
+  .landing.container
+    section.hero
+      h1.text-primary Layanan Publik <br />BNN Kabupaten Sleman
+      p.text-secondary.ts-m Website ini diperuntukan bagi masyarakat yang ingin mendapatkan <br />pelayanan di Badan Narkotika Nasional Kabupaten Sleman. Pelayanan meliputi Pengaduan, <br />Konsultasi, Sosialisasi, Rehabilitasi, Tes Urine, dan Layanan bagi para pelajar seperti Siswa atau Mahasiswa.
+    section.service
+      h2.title.text-primary Pilih Layanan
+      .grid.grid-column-3.g-3
+        include mixins/service_card
+        div
+          +service_card({
+            image:'/assets/images/pengaduan-icon.png',
+            href:'/pengaduan.html', 
+            title:'Pengaduan', 
+            summary:'Sampaikan atau Laporkan keluhan anda perihal narkotika kepada Badan Narkotika Nasional Kabupaten Sleman'})
+        div
+          +service_card({
+            image:'/assets/images/konsultasi-icon.png',
+            href:'/konsultasi.html', 
+            title:'Konsultasi', 
+            summary:'Konsultasikan masalah anda perihal narkotika kepada Badan Narkotika Nasional Kabupaten Sleman'})
+        div
+          +service_card({
+            image:'/assets/images/sosialisasi-icon.png',
+            href:'/sosialisasi.html', 
+            title:'Sosialisasi', 
+            summary:'Ajukan kerjasama kepada Badan Narkotika Nasional Kabupaten Sleman untuk kegiatan Sosialisasi Anda'})
+        div
+          +service_card({
+            image:'/assets/images/rehabilitasi-icon.png',
+            href:'/rehabilitasi.html', 
+            title:'Rehabilitasi', 
+            summary:'Rehabilitasi diperuntukkan bagi anda pecandu narkotika atau sedang dalam tahap pemulihan'})
+        div
+          +service_card({
+            image:'/assets/images/tes-urine-icon.png',
+            href:'/tes-urine.html', 
+            title:'Tes Urine', 
+            summary:'Tes urine membuat SKHPN (Surat Keterangan Hasil Pemeriksaan Narkotika) Di BNNK Sleman'})
+        div
+          +service_card({
+            image:'/assets/images/pelajar-icon.png',
+            href:'/pelajar.html', 
+            title:'Pelajar', 
+            summary:'Layanan diperuntukkan bagi pelajar yang akan melaksanakan kegiatan di Badan Narkotika Nasional Kabupaten Sleman'})

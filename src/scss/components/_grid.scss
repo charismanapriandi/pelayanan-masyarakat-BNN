@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  .item-center {
+    margin: auto;
+    width: fit-content;
+  }
+}
+
+@for $i from 1 through 4 {
+  $gridtemplatecolumn: 1 * $i;
+  .grid-column-#{$i} { 
+    grid-template-columns: repeat($gridtemplatecolumn, 1fr);
+  }
+}

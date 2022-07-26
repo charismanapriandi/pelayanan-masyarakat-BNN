@@ -1,0 +1,22 @@
+.form {
+  max-width: 600px;
+  margin: auto;
+  .form-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: $textprimary;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .form-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .input-group {
+    &:first-child {
+      margin: 15px 0;
+    }
+    margin-bottom: 15px;
+  }
+}

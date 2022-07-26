@@ -1,0 +1,10 @@
+.btn {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 4px;
+  font-size: $fontmedium;
+  color: white;
+  &.btn-contained {
+    background-color: $colorprimary;
+  }
+}

@@ -1,0 +1,24 @@
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.page-title {
+  margin-top: 50px;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+body {
+  background-color: #F8F9FD;
+}
+
+a {
+  text-decoration: none;
+  color: $textsecondary;
+}
+
+ul {
+  list-style: none;
+}

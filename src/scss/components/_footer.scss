@@ -1,0 +1,45 @@
+footer.footer {
+  margin-top: 60px;
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .color-line {
+    height: 16px;
+    display: flex;
+    div {
+      height: 100%;
+      flex: 1;
+      &:nth-child(1) {
+        background-color: $colorternary;
+      }
+      &:nth-child(2) {
+        flex: 2;
+        background-color: $colorsecondary;
+      }
+      &:nth-child(3) {
+        background-color: $colorprimary;
+      }
+    }
+  }
+  .footer-content {
+    margin: 40px auto;
+    .list {
+      li {
+        margin-bottom: 15px;
+        &:first-child {
+          margin-top: 15px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          transition: $transition;
+        }
+        a:hover {
+          color: $colorprimary
+        }
+      }
+    }
+  }
+}

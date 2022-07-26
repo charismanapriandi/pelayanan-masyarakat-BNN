@@ -1,0 +1,58 @@
+.landing {
+  section {
+    padding: 60px 0;
+    .title {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+  }
+  .hero {
+    &::before {
+      content: url('/assets/images/bg-hero-left.png');
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      top: 400px;
+    }
+    &::after {
+      content: url('/assets/images/bg-hero-right.png');
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      top: 300px;
+    }
+    h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+      margin-top: 60px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .service {
+    .title {
+      text-align: center;
+    }
+    .service-paper {
+      img {
+        margin-bottom: 18px;
+        width: 32px;
+        height: 32px;
+      }
+      cursor: pointer;
+      text-align: center;
+      transition: $transition;
+      height: 100%;
+      &:hover {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transform: scale(.98);
+      }
+      .service-title {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 30px;
+      }
+    }
+  }
+}

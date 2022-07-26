@@ -1,0 +1,84 @@
+extends ./layout/_layout
+
+block title 
+  | Pelajar | BNN Kabupaten Sleman
+
+block content 
+  .pengaduan.container 
+    h1.page-title.text-primary Lakukan Kegiatan Anda Bersama Badan Narkotika Nasional Kabupaten Sleman
+    form.form
+      h3.form-title Formulir Pelajar
+      include ./mixins/input
+      include ./mixins/input_file
+      include ./mixins/button
+      include ./mixins/select
+      include ./mixins/textarea
+      .input-group.input
+        +input({
+          label: 'Nama', 
+          name: 'nama', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Email', 
+          name: 'email', 
+          type: 'email'})
+      .input-group.input
+        +input({
+          label: 'Nomor Hp', 
+          name: 'nomor_hp', 
+          type: 'number'})
+      .input-group.select
+        +select({label: 'Jenis Kegiatan', name: 'jenis_kegiatan'})
+          option(value='Magang') 
+            | Magang
+          option(value='Skripsi') 
+            | Skripsi
+          option(value='PKL') 
+            | PKL
+          option(value='KKN') 
+            | KKN
+          option(value='Lainnya') 
+            | Lainnya
+      .input-group.input
+        +input({
+          label: 'Tempat dan Tanggal Lahir', 
+          name: 'tempat_dan_tanggal_lahir', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Alamat Domisili', 
+          name: 'alamat_domisili', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Sekolah/Universitas', 
+          name: 'sekolah', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Jurusan/Prodi', 
+          name: 'Jurusan', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Pengajuan Tanggal Kegiatan', 
+          name: 'pengajuan_tanggal_kegiatan', 
+          type: 'date'})
+      .input-group.input
+        +input({
+          label: 'Periode Kegiatan (Ex : 1 bulan, 2 bulan))', 
+          name: 'periode', 
+          type: 'text'})
+      .input-group.input-file
+        +input_file({
+          label: 'Lampiran Surat Pengantar Resmi dari Sekolah/Universitas (PDF)', 
+          name: 'surat_pengantar'})
+      .input-group.checkbox
+        +input({
+          label: 'Data Yang Saya Berikan Benar Adanya & Dapat Dipertanggungjawabkan', 
+          name: 'setuju', 
+          type: 'checkbox'})
+      .form-action
+        +button({type: 'submit'}) Submit
+        

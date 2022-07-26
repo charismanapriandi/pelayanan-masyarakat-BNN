@@ -1,0 +1,58 @@
+extends ./layout/_layout
+
+block title 
+  | Tes Urine | BNN Kabupaten Sleman
+
+block content 
+  .pengaduan.container 
+    h1.page-title.text-primary Lakukan Tes Urine Di Badan Narkotika Nasional Kabupaten Sleman
+    form.form
+      h3.form-title Formulir Tes Urine
+      include ./mixins/input
+      include ./mixins/input_file
+      include ./mixins/button
+      include ./mixins/select
+      include ./mixins/textarea
+      .input-group.input
+        +input({
+          label: 'Nama', 
+          name: 'nama', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Email', 
+          name: 'email', 
+          type: 'email'})
+      .input-group.input
+        +input({
+          label: 'Nomor Hp', 
+          name: 'nomor_hp', 
+          type: 'number'})
+      .input-group.select
+        +select({label: 'Kepentingan Tes Urine', name: 'kepentingan_tes_urine'})
+          option(value='SKHPN (Surat Keterangan Hasil Pemeriksaan Narkotika)') 
+            | SKHPN (Surat Keterangan Hasil Pemeriksaan Narkotika)
+          option(value='Lainnya') 
+            | Lainnya
+      .input-group.input
+        +input({
+          label: 'Alamat', 
+          name: 'alamat', 
+          type: 'text'})
+      .input-group.input
+        +input({
+          label: 'Tempat dan Tanggal Lahir', 
+          name: 'tempat_dan_tanggal_lahir', 
+          type: 'text'})
+      .input-group.input-file
+        +input_file({
+          label: 'Lampiran KTP/Identitas Lainnya (PDF)', 
+          name: 'indentitas'})
+      .input-group.checkbox
+        +input({
+          label: 'Data Yang Saya Berikan Benar Adanya & Dapat Dipertanggungjawabkan', 
+          name: 'setuju', 
+          type: 'checkbox'})
+      .form-action
+        +button({type: 'submit'}) Submit
+        
