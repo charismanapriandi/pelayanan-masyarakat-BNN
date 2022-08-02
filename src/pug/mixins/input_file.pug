@@ -1,6 +1,6 @@
-mixin input_file({label, name, placeholder})
+mixin input_file({label, name, placeholder, required = false, accept})
   label(for=name)=label
     .upload-field 
       img(src="./assets/images/document-text.png" alt="icon")
       span.label Unggah File
-    input(type="file" id=name name=name placeholder=placeholder hidden)
+  input(type="file" id=name name=name placeholder=placeholder hidden required=required accept=accept)

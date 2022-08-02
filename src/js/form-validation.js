@@ -1,5 +1,4 @@
 
-
 (() => {
   const form = document.querySelector('#form-validation');
   const regex = {
@@ -69,7 +68,3 @@
     }
   })
 })();
-
-// $(document).ready(function () {
-//   alert('navigation')
-// })

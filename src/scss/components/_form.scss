@@ -1,6 +1,11 @@
 .form {
   max-width: 600px;
   margin: auto;
+  .error-message {
+    color: $colorerror;
+    font-size: $fontsmall;
+    margin-top: 10px;
+  }
   .form-title {
     margin-bottom: 30px;
     font-size: 30px;

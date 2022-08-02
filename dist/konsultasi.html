@@ -17,31 +17,31 @@
     </nav>
     <div class="konsultasi container"> 
       <h1 class="page-title text-primary">Konsultasikan Diri Anda Kepada Badan Narkotika Nasional Kabupaten Sleman</h1>
-      <form class="form">
+      <form class="form" id="form-validation" novalidate>
         <h3 class="form-title">Formulir Konsultasi</h3>
         <div class="input-group input">
                   <label for="nama">Nama</label>
-                  <input type="text" id="nama" name="nama">
+                  <input type="text" id="nama" name="nama" required>
         </div>
         <div class="input-group input">
                   <label for="email">Email</label>
-                  <input type="email" id="email" name="email">
+                  <input type="email" id="email" name="email" required>
         </div>
         <div class="input-group input">
                   <label for="nomor_hp">Nomor Hp</label>
-                  <input type="number" id="nomor_hp" name="nomor_hp">
+                  <input type="number" id="nomor_hp" name="nomor_hp" required>
         </div>
         <div class="input-group input">
                   <label for="nama_kota">Nama Kota/Kabupaten</label>
-                  <input type="text" id="nama_kota" name="nama_kota">
+                  <input type="text" id="nama_kota" name="nama_kota" required>
         </div>
         <div class="input-group textarea">
                   <label for="uraian_konsultasi">Uraian Konsultasi</label>
-                  <textarea rows="5" id="uraian_konsultasi" name="uraian_konsultasi"></textarea>
+                  <textarea rows="5" id="uraian_konsultasi" name="uraian_konsultasi" required></textarea>
         </div>
         <div class="input-group checkbox">
                   <label for="setuju">Konsultasi Via Telp Call Center 082222216480</label>
-                  <input type="checkbox" id="setuju" name="setuju">
+                  <input type="checkbox" id="setuju" name="setuju" required>
         </div>
         <div class="form-action">
                   <button class="btn btn-contained" type="submit">Submit

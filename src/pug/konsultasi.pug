@@ -6,7 +6,7 @@ block title
 block content 
   .konsultasi.container 
     h1.page-title.text-primary Konsultasikan Diri Anda Kepada Badan Narkotika Nasional Kabupaten Sleman
-    form.form
+    form.form#form-validation(novalidate)
       h3.form-title Formulir Konsultasi
       include ./mixins/input
       include ./mixins/input_file
@@ -17,32 +17,38 @@ block content
         +input({
           label: 'Nama', 
           name: 'nama', 
-          type: 'text'})
+          type: 'text',
+          required: true})
       .input-group.input
         +input({
           label: 'Email', 
           name: 'email', 
-          type: 'email'})
+          type: 'email',
+          required: true})
       .input-group.input
         +input({
           label: 'Nomor Hp', 
           name: 'nomor_hp', 
-          type: 'number'})
+          type: 'number',
+          required: true})
       .input-group.input
         +input({
           label: 'Nama Kota/Kabupaten', 
           name: 'nama_kota', 
-          type: 'text'})
+          type: 'text',
+          required: true})
       .input-group.textarea
         +textarea({
           label: 'Uraian Konsultasi', 
           name: 'uraian_konsultasi', 
-          rows: '5'})
+          rows: '5',
+          required: true})
       .input-group.checkbox
         +input({
           label: 'Konsultasi Via Telp Call Center 082222216480', 
           name: 'setuju', 
-          type: 'checkbox'})
+          type: 'checkbox',
+          required: true})
       .form-action
         +button({type: 'submit'}) Submit
         

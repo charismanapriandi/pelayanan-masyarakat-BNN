@@ -1,4 +1,4 @@
-mixin select({label, name, placeholder})
+mixin select({label, name, placeholder, required = false})
   label(for=name)=label
-  select(type=type id=name name=name placeholder=placeholder)
+  select(type=type id=name name=name placeholder=placeholder required=required)
     block
